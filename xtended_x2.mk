@@ -1,5 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2021 The MSM Xtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,14 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/leeco/x2/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Xtended stuff.
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+XTENDED_BUILD_MAINTAINER := EinarGednochsson
+XTENDED_BUILD_TYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := LeEco
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeEco
-PRODUCT_NAME := lineage_x2
+PRODUCT_NAME := xtended_x2
 
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
 
